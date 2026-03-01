@@ -26,3 +26,12 @@ const urls = [
         await scrapeAndSum(url);
     }
 })();
+let grandTotal = 0;
+
+for (let url of urls) {
+    ...
+    grandTotal += sum;
+}
+
+console.log("FINAL TOTAL:", grandTotal);
+
