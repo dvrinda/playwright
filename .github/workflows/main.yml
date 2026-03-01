@@ -1,0 +1,27 @@
+name: Playwright Scraper
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when code is pushed to the main branch
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: |
+          npm install playwright
+
+      - name: Run Playwright scraper (with email in step name)
+        run: |
+          node script.js
+        name: 'Playwright Scraper Step - 21f1001205@ds.study.iitm.ac.in'
