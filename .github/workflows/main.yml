@@ -1,5 +1,4 @@
 name: Playwright Scraper
-
 on:
   push:
     branches:
